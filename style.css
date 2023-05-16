@@ -96,6 +96,19 @@ body {
 
 footer {
     min-height: 50px;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+footer a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
 }
 
 .hero-pinkbg {
@@ -104,4 +117,13 @@ footer {
 
 .hero-clothes {
     background-color: #FED2CA;
+}
+
+footer p {
+    color: #FFFFFF;
+    font-size: 16px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    margin: 0;
 }
