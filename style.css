@@ -7,10 +7,8 @@ body {
 }
 
 .container {
-    width: 100%;
     max-width: 900px;
     margin: 0 auto;
-    position: relative;
 }
 
 .hero-redbg {
@@ -81,13 +79,29 @@ body {
     border: white solid 3px;
     border-radius: 15px;
     background-color: #FFECE1;
-    position: absolute;
-    left: 28%;
-    bottom: 50%;
+    position: relative;
+    margin: 0 auto;
+    top: -50px;
     box-shadow: 11.6735px 20.1633px 38.2041px 6.36735px rgba(218, 0, 0, 0.19);
 }
 
 .main {
     background-color: #FFECE1;
     height: 1200px;
+}
+
+.clothes {
+    min-height: 200px;
+}
+
+footer {
+    min-height: 50px;
+}
+
+.hero-pinkbg {
+    background-color: #EB4F4F;
+}
+
+.hero-clothes {
+    background-color: #FED2CA;
 }
