@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.hero-redbg {
+    background-color: #EB4F4F;
+
+}
+
+.hero-bgbg {
+    background-color: #FFECE1;
+}
+
+
+.header {
+    min-height: 400px;
+    /* uvijek koristiti min-height umjesto height, zato sto na mobilnim verzijama height se mijenja */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+.header .links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 400px;
+}
+
+.header .links a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 24px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    padding-top: 20px;
+}
+
+.header h1 {
+    font-family: 'Lobster';
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 56px;
+}
+
+.header p {
+    font-family: 'Inter';
+    color: #FFFFFF;
+    font-size: 16pxpx;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.box {
+    padding: 15px 10px;
+    color: #4F4598;
+    font-family: "Inter";
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+    width: 400px;
+    height: 450px;
+    border: white solid 3px;
+    border-radius: 15px;
+    background-color: #FFECE1;
+    position: absolute;
+    left: 28%;
+    bottom: 50%;
+    box-shadow: 11.6735px 20.1633px 38.2041px 6.36735px rgba(218, 0, 0, 0.19);
+}
+
+.main {
+    background-color: #FFECE1;
+    height: 1200px;
+}
