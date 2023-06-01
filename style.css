@@ -1,3 +1,9 @@
+:root {
+    --main-color-red: #EB4F4F;
+    --main-color-light: #FFECE1;
+    --text-color-purple: #4F4598;
+}
+
 * {
     box-sizing: border-box;
 }
