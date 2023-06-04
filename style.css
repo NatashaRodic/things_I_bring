@@ -1,15 +1,21 @@
 :root {
-    --main-color-red: #EB4F4F;
-    --main-color-light: #FFECE1;
-    --text-color-purple: #4F4598;
-}
-
-* {
-    box-sizing: border-box;
+    /* Style */
+    --main-bg-red: #EB4F4F;
+    --main-bg-light: #FFECE1;
+    --main-bg-pink: #FED2CA;
+    --text-purple: #4F4598;
+    --text-light: #FFFFFF;
+    --body-font: 'Inter';
+    --heading-font: 'Lobster';
 }
 
 body {
     margin: 0;
+    box-sizing: border-box;
+    font-family: var(--body-font);
+    color: var(--text-light);
+    width: 100%;
+
 }
 
 .container {
@@ -18,7 +24,7 @@ body {
 }
 
 .hero-redbg {
-    background-color: #EB4F4F;
+    background-color: var(--main-bg-red);
 
 }
 
@@ -28,7 +34,7 @@ body {
 
 
 .header {
-    min-height: 400px;
+    /* min-height: 400px; */
     /* uvijek koristiti min-height umjesto height, zato sto na mobilnim verzijama height se mijenja */
     display: flex;
     flex-direction: column;
@@ -132,4 +138,26 @@ footer p {
     font-style: normal;
     font-weight: 500;
     margin: 0;
+}
+
+.half-width {
+    max-width: 280px;
+}
+
+.button {
+    background-color: white;
+    color: var(--text-purple);
+    border-radius: 20px;
+    box-shadow: #4F4598;
+    border-color: #4F4598;
+    padding: 5px 20px;
+}
+
+.button-submit {
+    background-color: var(--main-bg-red);
+    color: white;
+    border-radius: 20px;
+    box-shadow: #4F4598;
+    border-color: #4F4598;
+    padding: 5px 20px;
 }
