@@ -14,9 +14,15 @@ body {
     margin: 0;
     box-sizing: border-box;
     font-family: var(--body-font);
-    color: var(--text-light);
     width: 100%;
+}
 
+h2 {
+    margin: 0;
+}
+
+.text-center {
+    text-align: center;
 }
 
 .container {
@@ -24,12 +30,20 @@ body {
     margin: 0 auto;
 }
 
+.red-bg {
+    background-color: var(--main-bg-red);
+}
+
+.beige-bg {
+    background-color: var(--main-bg-light);
+}
+
 .navbar {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    background-color: var(--main-bg-red);
+
     /* max-width: var(--standard-width);
     padding: 0 24px; */
 }
@@ -40,8 +54,6 @@ body {
     justify-content: center;
     align-items: center;
     padding: 0;
-
-
 }
 
 .menu a {
@@ -56,59 +68,43 @@ body {
     cursor: pointer;
 }
 
+/* <!-- HEADER --> */
 
-.hero-redbg {
+.hero-header {
     background-color: var(--main-bg-red);
-
-}
-
-.hero-bgbg {
-    background-color: #FFECE1;
-}
-
-
-.header {
-    /* min-height: 400px; */
-    /* uvijek koristiti min-height umjesto height, zato sto na mobilnim verzijama height se mijenja */
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; */
     padding-bottom: 50px;
+
 }
 
-.header .links {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 400px;
+.header-hero {
+    text-align: center;
+    padding-bottom: 48px;
 }
 
-.header .links a {
-    text-decoration: none;
-    color: #FFFFFF;
-    font-size: 24px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 500;
-    padding-top: 20px;
-}
 
-.header h1 {
+
+header h1 {
     font-family: 'Lobster';
-    color: #FFFFFF;
     font-weight: 400;
     font-size: 56px;
+    margin: 0;
+    padding-top: 30px;
 }
 
-.header p {
+header p {
     font-family: 'Inter';
-    color: #FFFFFF;
-    font-size: 16pxpx;
+    font-size: 16px;
     padding-bottom: 30px;
     text-align: center;
 }
+
+/* <!-- ABOUT THE APP SECTION --> */
+
+
 
 .box {
     padding: 15px 10px;
@@ -131,10 +127,63 @@ body {
     box-shadow: 11.6735px 20.1633px 38.2041px 6.36735px rgba(218, 0, 0, 0.19);
 }
 
-.main {
-    background-color: #FFECE1;
-    height: 1200px;
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: var(--text-purple);
 }
+
+.about h1 {
+    font-family: var(--heading-font);
+    color: var(--main-bg-red);
+    font-size: 40px;
+    font-weight: 300;
+}
+
+.how-to-prepare {
+    padding: 36px 24px;
+    column-count: 2;
+    column-gap: 36px;
+}
+
+@media screen and (max-width: 480px) {
+    .how-to-prepare {
+        column-count: 1;
+    }
+}
+
+.two-column {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.two-column>.col-left {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 0 24px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+.two-column>.col-right {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
 
 .clothes {
     min-height: 200px;
@@ -174,8 +223,9 @@ footer p {
     margin: 0;
 }
 
-.half-width {
+.text-container {
     max-width: 280px;
+    margin: 0 auto;
 }
 
 .button {
@@ -195,3 +245,7 @@ footer p {
     border-color: #4F4598;
     padding: 5px 20px;
 }
+
+
+
+/* uvijek koristiti min-height umjesto height, zato sto na mobilnim verzijama height se mijenja */
