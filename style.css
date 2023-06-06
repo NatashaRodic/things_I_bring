@@ -233,7 +233,7 @@ footer p {
     margin: 0 auto;
 }
 
-.button {
+input {
     background-color: white;
     color: var(--text-purple);
     border-radius: 20px;

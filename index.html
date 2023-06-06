@@ -37,23 +37,29 @@
     </header>
     <main>
         <!---BOX SECTION  -->
-
         <div class="beige-bg">
             <div class="container">
+
                 <div class="box">
-                    <p class="half-width">Give us a few details and we will generate a list of things to pack!</p>
-                    <p>Where?</p>
-                    <button class="button">Paris, France</button>
-                    <p>How many days?</p>
-                    <button class="button">14</button>
-                    <p>Style?</p>
-                    <button type="button"></button>
-                    <button></button>
-                    <button type="submit" class="button-submit">Pack Me!</button>
+                    <form action="">
+                        <div>
+                            <label for="location">Where?</label>
+                            <input type="text" name="location" id="location" placeholder="Location" required>
+                        </div>
+                        <div>
+                            <label for="days">How many days?</label>
+                            <input type="number" name="days" id="days" placeholder="Days" required>
+                        </div>
+                        <label for="style">Style?</label>
+                        <label for="male">Male</label>
+                        <input type="radio" name="style" id="male">
+                        <label for="female">Female</label>
+                        <input type="radio" name="style" id="female">
+                        <button type="submit" class="button-submit">Pack Me!</button>
+                    </form>
                 </div>
             </div>
         </div>
-
         <!-- ABOUT THE APP SECTION -->
         <div class="beige-bg">
             <div class="container">
