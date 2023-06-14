@@ -132,6 +132,28 @@ header p {
     box-shadow: 11.6735px 20.1633px 38.2041px 6.36735px rgba(218, 0, 0, 0.19);
 }
 
+.box label {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    margin-top: 20px;
+}
+
+.box .style-choice {
+    display: flex;
+    justify-content: center;
+}
+
+.box .style-choice div:nth-child(2n) {
+    margin-left: 15px;
+
+}
+
+.box button {
+    margin-top: 20px;
+}
+
 .about {
     display: flex;
     flex-direction: column;
