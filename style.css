@@ -10,6 +10,10 @@
     --standard-width: 1144px;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     box-sizing: border-box;
@@ -22,6 +26,11 @@ h2 {
     font-family: var(--heading-font);
     font-size: 36px;
     color: var(--main-bg-red);
+}
+
+.img-resp {
+    width: 100%;
+    height: auto;
 }
 
 .text-center {
@@ -214,6 +223,16 @@ header p {
 
 .clothes {
     min-height: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+.clothes .lady {
+
+    max-width: 150px;
 }
 
 footer {
