@@ -273,6 +273,18 @@ input {
     padding: 5px 20px;
 }
 
+@media screen and (max-width: 481px) {
+    .box {
+        width: 250px;
+        height: 350px;
+    }
+
+    .menu a {
+        margin: 0 14px;
+        font-size: 14px;
+    }
+}
+
 
 
 /* uvijek koristiti min-height umjesto height, zato sto na mobilnim verzijama height se mijenja */
