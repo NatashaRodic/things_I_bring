@@ -1,14 +1,18 @@
+/* VARIABLES */
 :root {
-    /* Style */
+    /* COLOR VARIABLES */
     --main-bg-red: #EB4F4F;
     --main-bg-light: #FFECE1;
     --main-bg-pink: #FED2CA;
+    /* TEXT VARIABLES */
     --text-purple: #4F4598;
     --text-light: #FFFFFF;
     --body-font: 'Inter';
     --heading-font: 'Lobster';
     --standard-width: 1144px;
 }
+
+/* GENERAL ELEMENT STYLES */
 
 * {
     box-sizing: border-box;
@@ -28,6 +32,8 @@ h2 {
     color: var(--main-bg-red);
 }
 
+/* LAYOUT SYLES */
+
 .img-resp {
     width: 100%;
     height: auto;
@@ -35,6 +41,12 @@ h2 {
 
 .text-center {
     text-align: center;
+}
+
+
+.text-container {
+    max-width: 280px;
+    margin: 0 auto;
 }
 
 .container {
@@ -55,9 +67,6 @@ h2 {
     justify-content: center;
     align-items: center;
     width: 100%;
-
-    /* max-width: var(--standard-width);
-    padding: 0 24px; */
 }
 
 .menu {
@@ -80,7 +89,8 @@ h2 {
     cursor: pointer;
 }
 
-/* <!-- HEADER --> */
+
+/* HEADER */
 
 .hero-header {
     background-color: var(--main-bg-red);
@@ -116,9 +126,9 @@ header p {
     color: var(--text-light);
 }
 
-/* <!-- ABOUT THE APP SECTION --> */
 
 
+/* BOX SECTION */
 
 .box {
     padding: 15px 10px;
@@ -162,6 +172,27 @@ header p {
 .box button {
     margin-top: 20px;
 }
+
+input {
+    background-color: white;
+    color: var(--text-purple);
+    border-radius: 20px;
+    box-shadow: #4F4598;
+    border-color: #4F4598;
+    padding: 5px 20px;
+}
+
+
+.button-submit {
+    background-color: var(--main-bg-red);
+    color: white;
+    border-radius: 20px;
+    box-shadow: #4F4598;
+    border-color: #4F4598;
+    padding: 5px 20px;
+}
+
+/* ABOUT THE APP SECTION */
 
 .about {
     display: flex;
@@ -220,6 +251,15 @@ header p {
     justify-content: center;
 }
 
+/* HERO CLOTHES SECTION */
+
+.hero-clothes {
+    background-color: #FED2CA;
+}
+
+.hero-pinkbg {
+    background-color: #EB4F4F;
+}
 
 .clothes {
     min-height: 200px;
@@ -233,6 +273,8 @@ header p {
 .clothes .lady {
     max-width: 150px;
 }
+
+/* FOOTER SECTION */
 
 footer {
     min-height: 50px;
@@ -251,14 +293,6 @@ footer a {
     font-weight: 500;
 }
 
-.hero-pinkbg {
-    background-color: #EB4F4F;
-}
-
-.hero-clothes {
-    background-color: #FED2CA;
-}
-
 footer p {
     color: #FFFFFF;
     font-size: 16px;
@@ -268,28 +302,7 @@ footer p {
     margin: 0;
 }
 
-.text-container {
-    max-width: 280px;
-    margin: 0 auto;
-}
-
-input {
-    background-color: white;
-    color: var(--text-purple);
-    border-radius: 20px;
-    box-shadow: #4F4598;
-    border-color: #4F4598;
-    padding: 5px 20px;
-}
-
-.button-submit {
-    background-color: var(--main-bg-red);
-    color: white;
-    border-radius: 20px;
-    box-shadow: #4F4598;
-    border-color: #4F4598;
-    padding: 5px 20px;
-}
+/* CUSTON BREAKPOINT (481px) */
 
 @media screen and (max-width: 481px) {
     .box {
@@ -302,7 +315,5 @@ input {
         font-size: 14px;
     }
 }
-
-
 
 /* uvijek koristiti min-height umjesto height, zato sto na mobilnim verzijama height se mijenja */
