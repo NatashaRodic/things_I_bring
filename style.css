@@ -177,9 +177,11 @@ input {
     background-color: white;
     color: var(--text-purple);
     border-radius: 20px;
-    box-shadow: #4F4598;
+    /* box-shadow: #4F4598; */
     border-color: #4F4598;
-    padding: 5px 20px;
+    padding: 9px 20px;
+    font-size: 20px;
+    border: 1px solid #4F4598;
 }
 
 
