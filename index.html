@@ -41,8 +41,8 @@
             <div class="container">
 
                 <div class="box">
-                    <form action="">
-                        <div>
+                    <form action="" autocomplete="off">
+                        <div class="autocomplete">
                             <label for="location">Where?</label>
                             <input type="text" name="location" id="location" placeholder="Location" required>
                         </div>
@@ -61,7 +61,7 @@
                                 <input type="radio" name="style" id="women">
                             </div>
                         </div>
-                        <button type="submit" class="button-submit">Pack Me!</button>
+                        <button id="btnPackMe" type="submit" class="button-submit">Pack Me!</button>
                     </form>
                 </div>
             </div>
@@ -69,6 +69,7 @@
         <!-- ABOUT THE APP SECTION -->
         <div class="beige-bg">
             <div class="container">
+                <p class="text-center" id="packThis"></p>
                 <h2 class="text-center">How to prepare for travel in 60 minutes?</h2>
                 <div class="how-to-prepare">
                     Introducing Things I Bring, the app that simplifies travel packing and ensures you're dressed to
@@ -102,6 +103,7 @@
             </div>
         </div>
     </main>
+    <script src="script.js"></script>
 </body>
 
 </html>

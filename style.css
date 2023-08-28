@@ -32,6 +32,12 @@ h2 {
     color: var(--main-bg-red);
 }
 
+p {
+    margin: 0;
+    margin-bottom: 0px;
+
+}
+
 /* LAYOUT SYLES */
 
 .img-resp {
@@ -172,6 +178,62 @@ header p {
 .box button {
     margin-top: 20px;
 }
+
+.autocomplete {
+    position: relative;
+    display: inline-block;
+}
+
+.autocomplete-items {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    /* border-bottom: none;
+    border-top: none; */
+    z-index: 99;
+    top: 100%;
+    left: 0;
+    right: 0;
+    border-radius: 10px;
+
+}
+
+.autocomplete-items {
+    color: #918cbb;
+}
+
+.autocomplete-items strong {
+    color: #4F4598;
+}
+
+.autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    border-bottom: 1px solid #d4d4d4;
+}
+
+.autocomplete-items div:first-of-type {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.autocomplete-items div:last-of-type {
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.autocomplete-items div:hover {
+    background-color: DodgerBlue;
+    color: #ffffff;
+
+}
+
+.autocomplete-active {
+    background-color: DodgerBlue !important;
+    color: #ffffff;
+}
+
+
 
 input {
     background-color: white;
