@@ -33,6 +33,12 @@ const items = [
         weather: 'All',
         daysInUse: 1,
         essentials: true
+    },
+    {
+        itemName: 'Dress',
+        weather: 'Hot',
+        daysInUse: 1,
+        essentials: false
     }
 ]
 
@@ -66,10 +72,27 @@ const bringEssentials = function (itemsBring, items, days) {
     });
     return itemsBring
 }
-console.log(bringEssentials(itemsBring, items, 14));
+// console.log(bringEssentials(itemsBring, items, 14));
+
+// ADDS ALL NONESSENTIAL ITEMS FROM THE FIRST PARAMETER (JSON) TO THE SECOND PARAMETER (JSON - ITEMS THAT WE NEED TO BRING TO VACATION)
+const bringWeatherItems = function (itemsBring, items, vrijeme, days) {
+
+    items.forEach(item => {
+        if(item.essentials === false && item.weather === vrijeme) {
+            itemsBring.push(
+                {
+                    itemName: item.itemName,
+                    itemQuantity: howManyByDays(item.daysInUse, days)
+                }
+            )
+        }
+    })
+    return itemsBring
+}
+
+console.log(bringWeatherItems(itemsBring, items, "Hot", 3));
 
 
-// bringWeatherItems (itemsBring, items, vrijeme, days) // 
 
 
 // FUNCTION FOR COLD/HOT WEATHER
