@@ -13,15 +13,66 @@ const items = [
     {
         itemName: 'T-Shirt',
         weather: 'All',
-        daysInUse: 3
+        daysInUse: 3,
+        essentials: false
     },
     {
         itemName: 'Jacket',
         weather: 'Cold',
-        daysInUse: 365
+        daysInUse: 365,
+        essentials: false
+    },
+    {
+        itemName: 'Passport',
+        weather: 'All',
+        daysInUse: 365,
+        essentials: true
+    },
+    {
+        itemName: 'Underwear',
+        weather: 'All',
+        daysInUse: 1,
+        essentials: true
     }
 ]
 
+const itemsBring = [
+    {
+        itemName: 'Socks',
+        itemQuantity: 3
+    }
+];
+
+
+// majica , svaka 3 dana 
+const howManyByDays = function(daysInUse, stay){
+    if(stay<=daysInUse){return 1} else {return Math.trunc(stay/daysInUse)}
+}
+
+
+// ADDS ALL ESSENTIAL ITEMS FROM THE FIRST PARAMETER (JSON) TO THE SECOND PARAMETER (JSON - ITEMS THAT WE NEED TO BRING TO VACATION)
+const bringEssentials = function (itemsBring, items, days) {
+    items.forEach(item => {
+        if(item.essentials === true) {
+            itemsBring.push(
+                {
+                    itemName: item.itemName,
+                    itemQuantity: howManyByDays(item.daysInUse, days)
+                }
+
+            )
+        }
+       
+    });
+    return itemsBring
+}
+console.log(bringEssentials(itemsBring, items, 14));
+
+
+// bringWeatherItems (itemsBring, items, vrijeme, days) // 
+
+
+// FUNCTION FOR COLD/HOT WEATHER
 function printLocationWeather (lokacija, locationWeather){
     let vrijeme =  locationWeather.find(locationItem => 
         locationItem.location === lokacija
@@ -30,6 +81,7 @@ function printLocationWeather (lokacija, locationWeather){
     return vrijeme.weather;
 }
 
+// 
 
 
 //  FUNCTION FOR AUTOCOMPLETE //
@@ -120,7 +172,7 @@ function displayDate (event) {
     let location = document.getElementById('location').value;
     console.log(location);
     let days = document.getElementById('days').value;
-    document.getElementById('packThis').innerText = `For ${days} days in ${location} it will be ${printLocationWeather(location,locationWeather)} you should pack: ${majica(days)} `;
+    document.getElementById('packThis').innerText = `It will be ${printLocationWeather(location,locationWeather)} in ${location} you should pack: ${majica(days)} for your ${days} day trip `;
 }
 
 // ESSENTIALS //
