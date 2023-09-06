@@ -222,9 +222,10 @@ function displayDate (event) {
 // ]
 
 
+//// Bring Items Function ////
 
-bringItems (items, weatherType=printLocationWeather(location,locationWeather), days) 
-prints [{itemName:T-Shirt, bring:2}]
+// bringItems (items, weatherType=printLocationWeather(location,locationWeather), days) 
+// prints [{itemName:T-Shirt, bring:2}]
 
 
 let majica = function(days) {
