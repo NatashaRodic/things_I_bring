@@ -1,4 +1,5 @@
-const locations = ['Boston', 'New York', 'New Orleans', 'San Francisco', 'Denver', 'Dallas', 'Portland'];
+const locations = ['Boston', 'New York', 'San Francisco'];
+
 const locationWeather = [
     {
         location: 'Boston',
@@ -7,37 +8,54 @@ const locationWeather = [
     {
         location: 'Dallas',
         weather: 'Hot'
+    },
+    
+    {
+        location: 'New York',
+        weather: 'Cold'
+    },
+    {
+        location: 'San Francisco',
+        weather: 'Hot'
     }
+
 ]
+
+
 const items = [
     {
         itemName: 'T-Shirt',
         weather: 'All',
-        daysInUse: 3,
+        daysInUse: 2,
+        style: 'Unisex',
         essentials: false
     },
     {
         itemName: 'Jacket',
         weather: 'Cold',
         daysInUse: 365,
+        style: 'Unisex',
         essentials: false
     },
     {
         itemName: 'Passport',
         weather: 'All',
         daysInUse: 365,
+        style: 'Unisex',
         essentials: true
     },
     {
         itemName: 'Underwear',
         weather: 'All',
         daysInUse: 1,
+        style: 'Unisex',
         essentials: true
     },
     {
         itemName: 'Dress',
         weather: 'Hot',
-        daysInUse: 1,
+        daysInUse: 3,
+        style: 'Women',
         essentials: false
     }
 ]
@@ -49,18 +67,23 @@ const itemsBring = [
     }
 ];
 
+const essentialsBring = [
+  
+];
 
-// majica , svaka 3 dana 
+
+// majica , svaka  dana 
 const howManyByDays = function(daysInUse, stay){
     if(stay<=daysInUse){return 1} else {return Math.trunc(stay/daysInUse)}
 }
 
 
+
 // ADDS ALL ESSENTIAL ITEMS FROM THE FIRST PARAMETER (JSON) TO THE SECOND PARAMETER (JSON - ITEMS THAT WE NEED TO BRING TO VACATION)
-const bringEssentials = function (itemsBring, items, days) {
+const bringEssentials = function (essentialsBring, items, days) {
     items.forEach(item => {
         if(item.essentials === true) {
-            itemsBring.push(
+            essentialsBring.push(
                 {
                     itemName: item.itemName,
                     itemQuantity: howManyByDays(item.daysInUse, days)
@@ -70,7 +93,7 @@ const bringEssentials = function (itemsBring, items, days) {
         }
        
     });
-    return itemsBring
+    return essentialsBring;
 }
 // console.log(bringEssentials(itemsBring, items, 14));
 
@@ -90,13 +113,13 @@ const bringWeatherItems = function (itemsBring, items, vrijeme, days) {
     return itemsBring
 }
 
-console.log(bringWeatherItems(itemsBring, items, "Hot", 3));
+// console.log(bringWeatherItems(itemsBring, items, "Hot", 3));
 
 
 
 
 // FUNCTION FOR COLD/HOT WEATHER
-function printLocationWeather (lokacija, locationWeather){
+const printLocationWeather = function (lokacija, locationWeather){
     let vrijeme =  locationWeather.find(locationItem => 
         locationItem.location === lokacija
      )
@@ -106,6 +129,38 @@ function printLocationWeather (lokacija, locationWeather){
 
 // 
 
+
+// FUNCTION TO GENERATE A RESPONSE //
+document.getElementById("btnPackMe").addEventListener("click", displayDate);
+function displayDate (event) {
+    event.preventDefault();
+    let location = document.getElementById('location').value;
+    console.log(location);
+    let days = document.getElementById('days').value;
+    let style = document.getElementById('style').value;
+    console.log(style)
+    document.getElementById('packThis').innerText =
+    `ESSENTIALS YOU HAVE TO BRING ON YOUR TRIP: ${(JSON.stringify(bringEssentials(essentialsBring, items, days)))}
+    ITEMS TO BRING ON YOUR TRIP: ${(JSON.stringify(bringWeatherItems(itemsBring, items, printLocationWeather(location, locationWeather), days)))}`
+    
+    // `It will be ${printLocationWeather(location,locationWeather)} in ${location} you should pack: ${stvari(days)} T-shirts, ${stvari(days)} Dresses, ${stvari(days)} Pants, for your ${days} day trip `;
+}
+
+
+/// FUNCTION FOR MAJICE ///
+const majice = function(days) {
+    if (days > 2) {
+        return (`${Math.floor(days/2)}`)
+    }
+    else if (days == 2) {
+        return `${days}`
+    }
+    else {
+        return `${days}`
+    }
+}
+
+/////Dovrsiti ovu funkciju i vidjeti sto ne radi ////
 
 //  FUNCTION FOR AUTOCOMPLETE //
 function autocomplete(input, locations) {
@@ -185,18 +240,13 @@ function autocomplete(input, locations) {
   });
   }
 autocomplete(document.getElementById("location"), locations);
+//  FUNCTION FOR AUTOCOMPLETE //
 
 
-// FUNCTION TO GENERATE A RESPONSE //
 
-document.getElementById("btnPackMe").addEventListener("click", displayDate);
-function displayDate (event) {
-    event.preventDefault();
-    let location = document.getElementById('location').value;
-    console.log(location);
-    let days = document.getElementById('days').value;
-    document.getElementById('packThis').innerText = `It will be ${printLocationWeather(location,locationWeather)} in ${location} you should pack: ${majica(days)} for your ${days} day trip `;
-}
+
+
+
 
 // ESSENTIALS //
 
@@ -228,10 +278,6 @@ function displayDate (event) {
 // prints [{itemName:T-Shirt, bring:2}]
 
 
-let majica = function(days) {
-    if (days > 2) {
-        return (`${Math.floor(days/2)} shirts`)
-    }
-}
+
 
 
