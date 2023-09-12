@@ -27,49 +27,42 @@ const items = [
         itemName: 'T-Shirt',
         weather: 'All',
         daysInUse: 2,
-        style: 'Unisex',
         essentials: false
     },
     {
         itemName: 'Jacket',
         weather: 'Cold',
         daysInUse: 365,
-        style: 'Unisex',
         essentials: false
     },
     {
         itemName: 'Passport',
         weather: 'All',
         daysInUse: 365,
-        style: 'Unisex',
         essentials: true
     },
     {
         itemName: 'Underwear',
         weather: 'All',
         daysInUse: 1,
-        style: 'Unisex',
         essentials: true
     },
     {
         itemName: 'Dress',
         weather: 'Hot',
         daysInUse: 3,
-        style: 'Women',
         essentials: false
     }
 ]
 
 const itemsBring = [
-    {
-        itemName: 'Socks',
-        itemQuantity: 3
-    }
 ];
 
-const essentialsBring = [
-  
-];
+const essentialsBring = [];
+
+
+
+// const styleClothes = document.getElementById('style').value;
 
 
 // majica , svaka  dana 
@@ -101,7 +94,7 @@ const bringEssentials = function (essentialsBring, items, days) {
 const bringWeatherItems = function (itemsBring, items, vrijeme, days) {
 
     items.forEach(item => {
-        if(item.essentials === false && item.weather === vrijeme) {
+        if(item.essentials === false && (item.weather === vrijeme || item.weather === 'All')) {
             itemsBring.push(
                 {
                     itemName: item.itemName,
@@ -109,8 +102,25 @@ const bringWeatherItems = function (itemsBring, items, vrijeme, days) {
                 }
             )
         }
-    })
-    return itemsBring
+    
+    }
+    )
+    
+  
+    //     if(style === 'Women') {
+    //         itemsBring.push(
+    //             {
+    //                 itemName: 'Dress',
+    //                 itemQuantity: howManyByDays(item.daysInUse, days)
+    //             },
+    //             {
+    //                 itemName: 'Heals',
+    //                 itemQuantity: howManyByDays(item.daysInUse, days)
+    //             }
+    //         )
+    //     }
+  
+     return itemsBring
 }
 
 // console.log(bringWeatherItems(itemsBring, items, "Hot", 3));
@@ -137,12 +147,12 @@ function displayDate (event) {
     let location = document.getElementById('location').value;
     console.log(location);
     let days = document.getElementById('days').value;
-    let style = document.getElementById('style').value;
-    console.log(style)
+    // let style = document.getElementById('style').value;
+    // console.log(style)
     document.getElementById('packThis').innerText =
     `ESSENTIALS YOU HAVE TO BRING ON YOUR TRIP: ${(JSON.stringify(bringEssentials(essentialsBring, items, days)))}
     ITEMS TO BRING ON YOUR TRIP: ${(JSON.stringify(bringWeatherItems(itemsBring, items, printLocationWeather(location, locationWeather), days)))}`
-    
+   
     // `It will be ${printLocationWeather(location,locationWeather)} in ${location} you should pack: ${stvari(days)} T-shirts, ${stvari(days)} Dresses, ${stvari(days)} Pants, for your ${days} day trip `;
 }
 
