@@ -65,7 +65,7 @@ const essentialsBring = [];
 // const styleClothes = document.getElementById('style').value;
 
 
-// majica , svaka  dana 
+// majica 
 const howManyByDays = function(daysInUse, stay){
     if(stay<=daysInUse){return 1} else {return Math.trunc(stay/daysInUse)}
 }
@@ -88,7 +88,7 @@ const bringEssentials = function (essentialsBring, items, days) {
     });
     return essentialsBring;
 }
-// console.log(bringEssentials(itemsBring, items, 14));
+
 
 // ADDS ALL NONESSENTIAL ITEMS FROM THE FIRST PARAMETER (JSON) TO THE SECOND PARAMETER (JSON - ITEMS THAT WE NEED TO BRING TO VACATION)
 const bringWeatherItems = function (itemsBring, items, vrijeme, days) {
@@ -105,8 +105,11 @@ const bringWeatherItems = function (itemsBring, items, vrijeme, days) {
     
     }
     )
-    
-  
+     return itemsBring
+}
+
+
+
     //     if(style === 'Women') {
     //         itemsBring.push(
     //             {
@@ -119,13 +122,6 @@ const bringWeatherItems = function (itemsBring, items, vrijeme, days) {
     //             }
     //         )
     //     }
-  
-     return itemsBring
-}
-
-// console.log(bringWeatherItems(itemsBring, items, "Hot", 3));
-
-
 
 
 // FUNCTION FOR COLD/HOT WEATHER
@@ -170,7 +166,6 @@ const majice = function(days) {
     }
 }
 
-/////Dovrsiti ovu funkciju i vidjeti sto ne radi ////
 
 //  FUNCTION FOR AUTOCOMPLETE //
 function autocomplete(input, locations) {
