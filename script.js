@@ -137,8 +137,24 @@ function displayDate (event) {
     let days = document.getElementById('days').value;
     document.getElementById('packThis').innerText =
     `ESSENTIALS YOU HAVE TO BRING ON YOUR TRIP: ${(JSON.stringify(bringEssentials(essentialsBring, items, days)))}
-    ITEMS TO BRING ON YOUR TRIP: ${(JSON.stringify(bringWeatherItems(itemsBring, items, printLocationWeather(location, locationWeather), days, styleButton())))}, also you chose ${styleButton()}`
-   
+    ITEMS TO BRING ON YOUR TRIP: ${(JSON.stringify(bringWeatherItems(itemsBring, items, printLocationWeather(location, locationWeather), days, styleButton())))}, also you chose ${styleButton()}`;
+
+    let cardOutput ="";
+
+    bringEssentials(essentialsBring,items,days).forEach(item=>{
+        cardOutput+= `  <div class="item-card">
+        <div class="item">
+            <img src="https://picsum.photos/600/400" alt="">
+            <p>${item.itemName}</p>
+            <div class="checkbox-container">
+                <input type="checkbox" id="${item.itemName}">
+                <label for="${item.itemName}"></label>
+            </div>
+        </div>
+    </div>`
+    })
+
+    document.getElementById('bringItems').innerHTML = cardOutput;
     // `It will be ${printLocationWeather(location,locationWeather)} in ${location} you should pack: ${stvari(days)} T-shirts, ${stvari(days)} Dresses, ${stvari(days)} Pants, for your ${days} day trip `;
 }
 
