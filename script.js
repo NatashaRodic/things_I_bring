@@ -1,6 +1,5 @@
 const locations = ['Boston', 'New York', 'San Francisco'];
 
-
 const locationWeather = [
     {
         location: 'Boston',
@@ -22,12 +21,118 @@ const locationWeather = [
 
 ]
 
+// ESSENTIALS //
+
+// const travelDocuments = ['Any necessary visas or travel permits'];
+// const money = ['Cash in the local currency', 'Credit/debit cards'];
+// const toiletries = ['Toothbrush and toothpaste', 'Shampoo and conditioner', 'Body wash or soap', 'Hairbrush/comb', 'Razor and shaving cream', 'Moisturizer', 'Deodorant'];
+// const electronics = [];
+// const personalItems = ['Wallet and organizer']
+
+// const clothing = [
+// {    
+// 	 
+// 	 
+// 	 
+// 	 
+// 	 comfortableShoes: 0,
+// 	 swimwear: 0,
+//      hat: 0,
+//      umbrella: 0,
+// }
+// ]
+
 
 const items = [
     {
-        itemName: 'T-Shirt',
+        itemName: 'ID or passport',
+        weather: 'All',
+        daysInUse: 365,
+        essentials: true
+    },
+    {
+        itemName: 'Boarding passes or tickets',
+        weather: 'All',
+        daysInUse: 365,
+        essentials: true,
+    },
+    {
+        itemName: 'Hotel reservation confirmation',
+        weather: 'All',
+        daysInUse: 365,
+        essentials: true,
+    },
+    {
+        itemName: 'Credit/debit cards',
+        weather: 'All',
+        daysInUse: 365,
+        essentials: true,
+    },
+    {
+        itemName: 'Phone and charger',
+        weather: 'All',
+        daysInUse: 365,
+        essentials: true,
+    },
+    {
+        itemName: 'Power bank',
+        weather: 'All',
+        daysInUse: 365,
+        essentials: true,
+    },
+    {
+        itemName: 'Laptop/tablet and charger',
+        weather: 'All',
+        daysInUse: 365,
+        essentials: true,
+    },
+    
+
+    {
+        itemName: 'Keys',
+        weather: 'All',
+        daysInUse: 365,
+        essentials: true,
+    },
+    {
+        itemName: 'Sunglasses',
+        weather: 'Hot',
+        daysInUse: 365,
+        essentials: true,
+    },
+    
+    {
+        itemName: 'Hand sanitizer',
+        weather: 'All',
+        daysInUse: 365,
+        essentials: true,
+    },
+   
+    {
+        itemName: 'T-shirts/Tops',
         weather: 'All',
         daysInUse: 2,
+        essentials: false,
+        style: 'unisex'
+    },
+    {
+        itemName: 'Pants/Shorts',
+        weather: 'All',
+        daysInUse: 3,
+        essentials: false,
+        style: 'unisex'
+    },
+    {
+        itemName: 'Sleepwear',
+        weather: 'All',
+        daysInUse: 365,
+        essentials: false,
+        style: 'unisex'
+    },
+    {
+        itemName: 'Socks',
+        weather: 'All',
+        daysInUse: 1,
         essentials: false,
         style: 'unisex'
     },
@@ -39,16 +144,39 @@ const items = [
         style: 'unisex'
     },
     {
-        itemName: 'Passport',
+        itemName: 'Comfortable Shoes',
         weather: 'All',
         daysInUse: 365,
-        essentials: true
+        essentials: false,
+        style: 'unisex'
     },
+    {
+        itemName: 'Swimwear',
+        weather: 'Hot',
+        daysInUse: 365,
+        essentials: false,
+        style: 'unisex'
+    },
+    {
+        itemName: 'Hat',
+        weather: 'Hot',
+        daysInUse: 365,
+        essentials: false,
+        style: 'unisex'
+    },
+    {
+        itemName: 'Umbrella',
+        weather: 'Cold',
+        daysInUse: 365,
+        essentials: false,
+        style: 'unisex'
+    },
+    
     {
         itemName: 'Underwear',
         weather: 'All',
         daysInUse: 1,
-        essentials: true,
+        essentials: false,
         style: 'unisex'
     },
     {
@@ -135,9 +263,9 @@ function displayDate (event) {
     let location = document.getElementById('location').value;
     console.log(location);
     let days = document.getElementById('days').value;
-    document.getElementById('packThis').innerText =
-    `ESSENTIALS YOU HAVE TO BRING ON YOUR TRIP: ${(JSON.stringify(bringEssentials(essentialsBring, items, days)))}
-    ITEMS TO BRING ON YOUR TRIP: ${(JSON.stringify(bringWeatherItems(itemsBring, items, printLocationWeather(location, locationWeather), days, styleButton())))}, also you chose ${styleButton()}`;
+    // document.getElementById('packThis').innerText =
+    // `ESSENTIALS YOU HAVE TO BRING ON YOUR TRIP: ${(JSON.stringify(bringEssentials(essentialsBring, items, days)))}
+    // ITEMS TO BRING ON YOUR TRIP: ${(JSON.stringify(bringWeatherItems(itemsBring, items, printLocationWeather(location, locationWeather), days, styleButton())))}, also you chose ${styleButton()}`;
 
     let cardOutput ="";
 
@@ -154,7 +282,25 @@ function displayDate (event) {
     </div>`
     })
 
+
+    bringWeatherItems(itemsBring, items, printLocationWeather(location, locationWeather), days, styleButton()).forEach(item => {
+        cardOutput+= `  <div class="item-card">
+        <div class="item">
+            <img src="https://picsum.photos/600/400" alt="">
+            <p>${item.itemName} x ${item.itemQuantity}</p>
+            <div class="checkbox-container">
+                <input type="checkbox" id="${item.itemName}">
+                <label for="${item.itemName}"></label>
+            </div>
+        </div>
+    </div>`
+
+    })
+
     document.getElementById('bringItems').innerHTML = cardOutput;
+    
+    document.getElementById('bringItems').style.display="flex";
+    
     // `It will be ${printLocationWeather(location,locationWeather)} in ${location} you should pack: ${stvari(days)} T-shirts, ${stvari(days)} Dresses, ${stvari(days)} Pants, for your ${days} day trip `;
 }
 
@@ -242,28 +388,7 @@ function autocomplete(input, locations) {
 autocomplete(document.getElementById("location"), locations);
 //  FUNCTION FOR AUTOCOMPLETE //
 
-// ESSENTIALS //
 
-// const travelDocuments = ['ID or passport', 'Boarding passes or tickets', 'Hotel reservation confirmation', 'Any necessary visas or travel permits'];
-// const money = ['Cash in the local currency', 'Credit/debit cards'];
-// const toiletries = ['Toothbrush and toothpaste', 'Shampoo and conditioner', 'Body wash or soap', 'Hairbrush/comb', 'Razor and shaving cream', 'Moisturizer', 'Deodorant'];
-// const electronics = ['Phone and charger', 'Power bank', 'Laptop/tablet (if necessary) and charger', 'Adapters and converters for different sockets/plugs'];
-// const personalItems = ['Keys', 'Sunglasses', 'Wallet and organizer', 'Hand sanitizer'];
-
-// const clothing = [
-// {    underwear: 0,
-//      socks: 0,
-// 	 tshirtsTops: 0,
-// 	 pantsShorts: 0,
-// 	 jacket:0,
-// 	 sleepwear: 0,
-// 	 comfortableShoes: 0,
-// 	 swimwear: 0,
-//      hat: 0,
-//      sunglasses: 0,
-//      umbrella: 0,
-// }
-// ]
 
 
 //// Bring Items Function ////
