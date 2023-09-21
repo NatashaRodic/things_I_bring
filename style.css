@@ -264,7 +264,7 @@ input {
     /* margin-top: 50px; */
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 1px;
     padding: 20px;
     flex-wrap: wrap;
     border: red solid 1px;
@@ -273,7 +273,7 @@ input {
 }
 
 .item-card {
-    min-height: 100px;
+    /* min-height: 100px; */
     /* border: 1px solid #EB4F4F; */
     border-radius: 10px;
     flex-basis: calc(50% - 10px);
@@ -281,17 +281,28 @@ input {
 
 .item {
     border: #f0e6e9 solid 1px;
-    margin: 10px;
+    margin: 5px;
     border-radius: 5px;
     min-height: 50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px;
+    padding: 5px;
+    background-color: #f4f4f4;
+}
+
+.item .imgAndText {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.imgAndText p {
+    margin-left: 10px;
 }
 
 .item img {
-    max-width: 80px;
+    max-width: 50px;
     height: auto;
 }
 
