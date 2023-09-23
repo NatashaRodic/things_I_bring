@@ -209,10 +209,10 @@ const items = [
     }
 ]
 
-const itemsBring = [
+let itemsBring = [
 ];
 
-const essentialsBring = [];
+let essentialsBring = [];
 
 
 
@@ -281,7 +281,7 @@ const printLocationWeather = function (lokacija, locationWeather){
 
 // 
 // FUNCTION TO GENERATE A RESPONSE //
-function displayDate (event) {
+function displayData (event) {
     event.preventDefault();
     let location = document.getElementById('location').value;
     console.log(location);
@@ -322,13 +322,16 @@ function displayDate (event) {
     document.getElementById('bringItems').innerHTML = cardOutput;
     
     document.getElementById('bringItems').style.display="flex";
+
+    essentialsBring = [];
+    itemsBring = [];
     
     // `It will be ${printLocationWeather(location,locationWeather)} in ${location} you should pack: ${stvari(days)} T-shirts, ${stvari(days)} Dresses, ${stvari(days)} Pants, for your ${days} day trip `;
 }
 
 
 
-document.getElementById("btnPackMe").addEventListener("click", displayDate);
+document.getElementById("btnPackMe").addEventListener("click", displayData);
 
 
 //  FUNCTION FOR AUTOCOMPLETE //
