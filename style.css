@@ -389,6 +389,8 @@ input {
     padding: 36px 24px;
     column-count: 2;
     column-gap: 36px;
+    line-height: 2;
+    color: #7a4a3d;
 }
 
 @media screen and (max-width: 480px) {
@@ -429,7 +431,7 @@ input {
 /* HERO CLOTHES SECTION */
 
 .hero-clothes {
-    background-color: #FED2CA;
+    background-color: #FFECE1;
 }
 
 .hero-pinkbg {
@@ -443,6 +445,7 @@ input {
     align-items: center;
     padding-top: 40px;
     padding-bottom: 20px;
+
 }
 
 .clothes .lady {
@@ -468,21 +471,24 @@ footer a {
     font-weight: 500;
 }
 
-footer p {
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* footer p {
     color: #FFFFFF;
     font-size: 16px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 500;
     margin: 0;
-}
+} */
 
 /* CUSTON BREAKPOINT (481px) */
 
 @media screen and (max-width: 481px) {
     .box {
-        width: 250px;
-        height: 350px;
+        max-width: 304px;
     }
 
     .menu a {
