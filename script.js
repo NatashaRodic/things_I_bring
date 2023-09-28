@@ -1,28 +1,28 @@
 
 //Rewrite this part of the code, replace it with the API from weather app webstite
 
-const locations = ['Boston', 'New York', 'San Francisco'];
+const locations = ["Aberdeen", "Abilene", "Akron", "Albany", "Albuquerque", "Alexandria", "Allentown", "Amarillo", "Anaheim", "Anchorage", "Ann Arbor", "Antioch", "Apple Valley", "Appleton", "Arlington", "Arvada", "Asheville", "Athens", "Atlanta", "Atlantic City", "Augusta", "Aurora", "Austin", "Bakersfield", "Baltimore", "Barnstable", "Baton Rouge", "Beaumont", "Bel Air", "Bellevue", "Berkeley", "Bethlehem", "Billings", "Birmingham", "Bloomington", "Boise", "Boise City", "Bonita Springs", "Boston", "Boulder", "Bradenton", "Bremerton", "Bridgeport", "Brighton", "Brownsville", "Bryan", "Buffalo", "Burbank", "Burlington", "Cambridge", "Canton", "Cape Coral", "Carrollton", "Cary", "Cathedral City", "Cedar Rapids", "Champaign", "Chandler", "Charleston", "Charlotte", "Chattanooga", "Chesapeake", "Chicago", "Chula Vista", "Cincinnati", "Clarke County", "Clarksville", "Clearwater", "Cleveland", "College Station", "Colorado Springs", "Columbia", "Columbus", "Concord", "Coral Springs", "Corona", "Corpus Christi", "Costa Mesa", "Dallas", "Daly City", "Danbury", "Davenport", "Davidson County", "Dayton", "Daytona Beach", "Deltona", "Denton", "Denver", "Des Moines", "Detroit", "Downey", "Duluth", "Durham", "El Monte", "El Paso", "Elizabeth", "Elk Grove", "Elkhart", "Erie", "Escondido", "Eugene", "Evansville", "Fairfield", "Fargo", "Fayetteville", "Fitchburg", "Flint", "Fontana", "Fort Collins", "Fort Lauderdale", "Fort Smith", "Fort Walton Beach", "Fort Wayne", "Fort Worth", "Frederick", "Fremont", "Fresno", "Fullerton", "Gainesville", "Garden Grove", "Garland", "Gastonia", "Gilbert", "Glendale", "Grand Prairie", "Grand Rapids", "Grayslake", "Green Bay", "GreenBay", "Greensboro", "Greenville", "Gulfport-Biloxi", "Hagerstown", "Hampton", "Harlingen", "Harrisburg", "Hartford", "Havre de Grace", "Hayward", "Hemet", "Henderson", "Hesperia", "Hialeah", "Hickory", "High Point", "Hollywood", "Honolulu", "Houma", "Houston", "Howell", "Huntington", "Huntington Beach", "Huntsville", "Independence", "Indianapolis", "Inglewood", "Irvine", "Irving", "Jackson", "Jacksonville", "Jefferson", "Jersey City", "Johnson City", "Joliet", "Kailua", "Kalamazoo", "Kaneohe", "Kansas City", "Kennewick", "Kenosha", "Killeen", "Kissimmee", "Knoxville", "Lacey", "Lafayette", "Lake Charles", "Lakeland", "Lakewood", "Lancaster", "Lansing", "Laredo", "Las Cruces", "Las Vegas", "Layton", "Leominster", "Lewisville", "Lexington", "Lincoln", "Little Rock", "Long Beach", "Lorain", "Los Angeles", "Louisville", "Lowell", "Lubbock", "Macon", "Madison", "Manchester", "Marina", "Marysville", "McAllen", "McHenry", "Medford", "Melbourne", "Memphis", "Merced", "Mesa", "Mesquite", "Miami", "Milwaukee", "Minneapolis", "Miramar", "Mission Viejo", "Mobile", "Modesto", "Monroe", "Monterey", "Montgomery", "Moreno Valley", "Murfreesboro", "Murrieta", "Muskegon", "Myrtle Beach", "Naperville", "Naples", "Nashua", "Nashville", "New Bedford", "New Haven", "New London", "New Orleans", "New York", "New York City", "Newark", "Newburgh", "Newport News", "Norfolk", "Normal", "Norman", "North Charleston", "North Las Vegas", "North Port", "Norwalk", "Norwich", "Oakland", "Ocala", "Oceanside", "Odessa", "Ogden", "Oklahoma City", "Olathe", "Olympia", "Omaha", "Ontario", "Orange", "Orem", "Orlando", "Overland Park", "Oxnard", "Palm Bay", "Palm Springs", "Palmdale", "Panama City", "Pasadena", "Paterson", "Pembroke Pines", "Pensacola", "Peoria", "Philadelphia", "Phoenix", "Pittsburgh", "Plano", "Pomona", "Pompano Beach", "Port Arthur", "Port Orange", "Port Saint Lucie", "Port St. Lucie", "Portland", "Portsmouth", "Poughkeepsie", "Providence", "Provo", "Pueblo", "Punta Gorda", "Racine", "Raleigh", "Rancho Cucamonga", "Reading", "Redding", "Reno", "Richland", "Richmond", "Richmond County", "Riverside", "Roanoke", "Rochester", "Rockford", "Roseville", "Round Lake Beach", "Sacramento", "Saginaw", "Saint Louis", "Saint Paul", "Saint Petersburg", "Salem", "Salinas", "Salt Lake City", "San Antonio", "San Bernardino", "San Buenaventura", "San Diego", "San Francisco", "San Jose", "Santa Ana", "Santa Barbara", "Santa Clara", "Santa Clarita", "Santa Cruz", "Santa Maria", "Santa Rosa", "Sarasota", "Savannah", "Scottsdale", "Scranton", "Seaside", "Seattle", "Sebastian", "Shreveport", "Simi Valley", "Sioux City", "Sioux Falls", "South Bend", "South Lyon", "Spartanburg", "Spokane", "Springdale", "Springfield", "St. Louis", "St. Paul", "St. Petersburg", "Stamford", "Sterling Heights", "Stockton", "Sunnyvale", "Syracuse", "Tacoma", "Tallahassee", "Tampa", "Temecula", "Tempe", "Thornton", "Thousand Oaks", "Toledo", "Topeka", "Torrance", "Trenton", "Tucson", "Tulsa", "Tuscaloosa", "Tyler", "Utica", "Vallejo", "Vancouver", "Vero Beach", "Victorville", "Virginia Beach", "Visalia", "Waco", "Warren", "Washington", "Waterbury", "Waterloo", "West Covina", "West Valley City", "Westminster", "Wichita", "Wilmington", "Winston", "Winter Haven", "Worcester", "Yakima", "Yonkers", "York", "Youngstown"];
 
-const locationWeather = [
-    {
-        location: 'Boston',
-        weather: 'Cold'
-    },
-    {
-        location: 'Dallas',
-        weather: 'Hot'
-    },
+// const locationWeather = [
+//     {
+//         location: 'Boston',
+//         weather: 'Cold'
+//     },
+//     {
+//         location: 'Dallas',
+//         weather: 'Hot'
+//     },
 
-    {
-        location: 'New York',
-        weather: 'Cold'
-    },
-    {
-        location: 'San Francisco',
-        weather: 'Hot'
-    }
+//     {
+//         location: 'New York',
+//         weather: 'Cold'
+//     },
+//     {
+//         location: 'San Francisco',
+//         weather: 'Hot'
+//     }
 
-]
+// ]
 
 // ESSENTIALS //
 // const travelDocuments = ['Any necessary visas or travel permits'];
@@ -206,30 +206,31 @@ const items = [
 
 let itemsBring = [];
 let essentialsBring = [];
+let cardOutput = "";
 
-let styleButton = () => {
-    return document.querySelector('input[name="style"]:checked').value;
-}
+
+
+
 
 // FUNCTION FOR CALCUALATION DAYS IN USE FOR EACH ITEM (NONESSENTIAL AND ESSENTIAL)
 const howManyByDays = function (daysInUse, stay) {
     if (stay <= daysInUse) { return 1 } else { return Math.trunc(stay / daysInUse) }
 }
 
+
 // FUNCTION FOR COLD/HOT WEATHER
-const printLocationWeather = function (lokacija) {
-    // Return strings "HOT" or "COLD"
-    let temp = getWeatherFromApi(lokacija)
-
-    console.log(temp)
-
-    if (temp > 63) {
-        return "HOT"
-    } else return "COLD"
+const printLocationWeather = async function (lokacija) {
+    // Return strings "Hot" or "Cold"
+    console.log(lokacija);
+    let temp = await getWeatherFromApi(lokacija);
+    console.log("temperature:", temp)
+    if (temp > 62) {
+        return "Hot"
+    } else return "Cold"
 }
 
 // ADDS ALL ESSENTIAL ITEMS FROM THE FIRST PARAMETER (JSON) TO THE SECOND PARAMETER (JSON - ITEMS THAT WE NEED TO BRING TO VACATION)
-const bringEssentials = function (essentialsBring, items, days) {
+const bringEssentials = function (items, days) {
     items.forEach(item => {
         if (item.essentials === true) {
             essentialsBring.push(
@@ -243,13 +244,12 @@ const bringEssentials = function (essentialsBring, items, days) {
         }
 
     });
-    return essentialsBring;
 }
 
 
 // ADDS ALL NONESSENTIAL ITEMS FROM THE FIRST PARAMETER (JSON) TO THE SECOND PARAMETER (JSON - ITEMS THAT WE NEED TO BRING TO VACATION)
-const bringWeatherItems = function (itemsBring, items, vrijeme, days, style) {
-
+let bringWeatherItems = async function (items, days, style, location) {
+    let vrijeme = await printLocationWeather(location);
     items.forEach(item => {
         if ((item.essentials === false) && (item.weather === vrijeme || item.weather === 'All') && (item.style === style || item.style === 'unisex')) {
             itemsBring.push(
@@ -264,7 +264,7 @@ const bringWeatherItems = function (itemsBring, items, vrijeme, days, style) {
 
     }
     )
-    return itemsBring;
+
 }
 
 
@@ -272,50 +272,61 @@ const bringWeatherItems = function (itemsBring, items, vrijeme, days, style) {
 function displayData(event) {
     event.preventDefault();
     let location = document.getElementById('location').value;
-    console.log(location);
     let days = document.getElementById('days').value;
-    // document.getElementById('packThis').innerText =
-    // `ESSENTIALS YOU HAVE TO BRING ON YOUR TRIP: ${(JSON.stringify(bringEssentials(essentialsBring, items, days)))}
-    // ITEMS TO BRING ON YOUR TRIP: ${(JSON.stringify(bringWeatherItems(itemsBring, items, printLocationWeather(location, locationWeather), days, styleButton())))}, also you chose ${styleButton()}`; // DELETE THIS PART ONCE THE APP IS WORKING COMPLITELY
+    let style = document.querySelector('input[name="style"]:checked').value;
 
-    let cardOutput = "";
-
-    bringEssentials(essentialsBring, items, days).forEach(item => {
-        cardOutput += `  <div class="item-card" >
-        <div class="item" >
-           <div class="imgAndText">  <img src="${item.itemImage}" alt="">
-           <p>  ${item.itemName} ❗️</p></div>
-            <div class="checkbox-container">
-                <input type="checkbox" id="${item.itemName}">
-                <label for="${item.itemName}"></label>
-            </div>
-        </div>
-    </div>`
-    })
+    console.log({ location }, { days }, { style });
 
 
-    bringWeatherItems(itemsBring, items, printLocationWeather(location), days, styleButton()).forEach(item => {
-        cardOutput += `  <div class="item-card">
-        <div class="item">
-           <div class="imgAndText"> <img src="${item.itemImage}" alt="">
-           <p>${item.itemName} x <strong>${item.itemQuantity} </strong></p></div>
-            <div class="checkbox-container">
-                <input type="checkbox" id="${item.itemName}">
-                <label for="${item.itemName}"></label>
-            </div>
-        </div>
-    </div>`
-
-    })
-    document.getElementById('bringItems').innerHTML = cardOutput;
-
-    document.getElementById('bringItems').style.display = "flex";
-
-    // This part of the code unables users to get list agin if clicked on submit button. Sets the array to empty array
+    // reset item arrays before you generate them again to avaid duplicates
     essentialsBring = [];
     itemsBring = [];
+    cardOutput = "";
+
+    bringEssentials(items, days);
+    bringWeatherItems(items, days, style, location);
+
+
+    setTimeout(() => {
+        console.log("pokreni covjece");
+        console.log(essentialsBring, itemsBring);
+        generateCards();
+        document.getElementById('bringItems').innerHTML = cardOutput;
+    }, 500);
+
+    //shor or hide Card boxes
+    document.getElementById('bringItems').style.display = "flex";
+
+
 }
 
+
+let generateCards = function () {
+    essentialsBring.forEach(item => {
+        cardOutput += `  <div class="item-card" >
+            <div class="item" >
+               <div class="imgAndText">  <img src="${item.itemImage}" alt="">
+               <p>  ${item.itemName} ❗️</p></div>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="${item.itemName}">
+                    <label for="${item.itemName}"></label>
+                </div>
+            </div>
+        </div>`
+    })
+    itemsBring.forEach(item => {
+        cardOutput += `  <div class="item-card">
+            <div class="item">
+               <div class="imgAndText"> <img src="${item.itemImage}" alt="">
+               <p>${item.itemName} x <strong>${item.itemQuantity} </strong></p></div>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="${item.itemName}">
+                    <label for="${item.itemName}"></label>
+                </div>
+            </div>
+        </div>`
+    })
+}
 
 // When submit button clicked, displayData function is being called
 document.getElementById("btnPackMe").addEventListener("click", displayData);
@@ -405,36 +416,25 @@ autocomplete(document.getElementById("location"), locations);
 
 
 
-
-
-
-function getWeatherFromApi(lokacija) {
-    getCoords(lokacija).then(
-        longlat => {
-            return axios.get('https://api.open-meteo.com/v1/forecast?daily=temperature_2m_max&temperature_unit=fahrenheit&timeformat=unixtime&forecast_days=1', {
-                params: {
-                    latitude: longlat[0],
-                    longitude: longlat[1],
-                }
-            }).then(
-                ({ data }) => {
-                    console.log("temperature", data.daily.temperature_2m_max[0]);
-                    return data.daily.temperature_2m_max[0]
-                }
-            )
-
+//get weather
+let getWeatherFromApi = async function (city) {
+    const longlat = await getCoords(city);
+    const response = await axios.get('https://api.open-meteo.com/v1/forecast?daily=temperature_2m_max&temperature_unit=fahrenheit&timeformat=unixtime&forecast_days=1', {
+        params: {
+            latitude: longlat[0],
+            longitude: longlat[1],
         }
-
-    )
+    });
+    const temperature = response.data.daily.temperature_2m_max[0];
+    return temperature;
     //erorr this funciton is not returning anything 
     //return 63
 }
 
-function getCoords(city) {
-    return axios.get('https://geocode.maps.co/search?q=' + city)
-        .then(({ data }) => {
-            let long = data[0]['boundingbox'][0];
-            let lat = data[0]['boundingbox'][2];
-            return ([long, lat])
-        })
+//get coordinates
+let getCoords = async function (city) {
+    const response = await axios.get('https://geocode.maps.co/search?q=' + city);
+    let long = response.data[0]['boundingbox'][0];
+    let lat = response.data[0]['boundingbox'][2];
+    return [long, lat];
 }
