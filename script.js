@@ -44,49 +44,56 @@ const items = [
         weather: 'All',
         daysInUse: 365,
         essentials: true,
-        itemImage: 'images/passport.png'
+        itemImage: 'images/passport.png',
+        itemAltTag: ' Passport/ID icon'
     },
     {
         itemName: 'Boarding passes or tickets',
         weather: 'All',
         daysInUse: 365,
         essentials: true,
-        itemImage: 'images/boarding-passes.png'
+        itemImage: 'images/boarding-passes.png',
+        itemAltTag: 'Boarding pass or ticket icon'
     },
     {
         itemName: 'Hotel reservation confirmation',
         weather: 'All',
         daysInUse: 365,
         essentials: true,
-        itemImage: 'images/hotel-reservation-confirmation.png'
+        itemImage: 'images/hotel-reservation-confirmation.png',
+        itemAltTag: 'Hotel reservation confirmation icon'
     },
     {
         itemName: 'Credit/debit cards',
         weather: 'All',
         daysInUse: 365,
         essentials: true,
-        itemImage: 'images/debit-cards.png'
+        itemImage: 'images/debit-cards.png',
+        itemAltTag: 'Credit/debit card icon'
     },
     {
         itemName: 'Phone and charger',
         weather: 'All',
         daysInUse: 365,
         essentials: true,
-        itemImage: 'images/phone.png'
+        itemImage: 'images/phone.png',
+        itemAltTag: 'Phone and charger icon'
     },
     {
         itemName: 'Power bank',
         weather: 'All',
         daysInUse: 365,
         essentials: true,
-        itemImage: 'images/power-bank.png'
+        itemImage: 'images/power-bank.png',
+        itemAltTag: 'Power bank icon'
     },
     {
         itemName: 'Laptop/tablet and charger',
         weather: 'All',
         daysInUse: 365,
         essentials: true,
-        itemImage: 'images/tablet.png'
+        itemImage: 'images/tablet.png',
+        itemAltTag: 'Laptop/tablet and charger'
     },
 
 
@@ -95,14 +102,16 @@ const items = [
         weather: 'All',
         daysInUse: 365,
         essentials: true,
-        itemImage: 'images/keys.png'
+        itemImage: 'images/keys.png',
+        itemAltTag: 'Keys icon'
     },
     {
         itemName: 'Sunglasses',
         weather: 'Hot',
         daysInUse: 365,
-        essentials: true,
-        itemImage: 'images/sunglasses.png'
+        essentials: false,
+        itemImage: 'images/sunglasses.png',
+        itemAltTag: 'Sunglasses icon'
     },
 
     {
@@ -110,7 +119,8 @@ const items = [
         weather: 'All',
         daysInUse: 365,
         essentials: true,
-        itemImage: 'images/hand-sanitizer.png'
+        itemImage: 'images/hand-sanitizer.png',
+        itemAltTag: 'Hand sanitizer icon'
     },
 
     {
@@ -119,7 +129,8 @@ const items = [
         daysInUse: 2,
         essentials: false,
         style: 'unisex',
-        itemImage: 'images/tops.png'
+        itemImage: 'images/tops.png',
+        itemAltTag: 'T-shirt/Top icon'
     },
     {
         itemName: 'Pants/Shorts',
@@ -127,7 +138,8 @@ const items = [
         daysInUse: 3,
         essentials: false,
         style: 'unisex',
-        itemImage: 'images/pants.png'
+        itemImage: 'images/pants.png',
+        itemAltTag: 'Pants/Shorts icon'
     },
     {
         itemName: 'Sleepwear',
@@ -135,7 +147,8 @@ const items = [
         daysInUse: 365,
         essentials: false,
         style: 'unisex',
-        itemImage: 'images/sleepwear.png'
+        itemImage: 'images/sleepwear.png',
+        itemAltTag: 'Sleepwear icon'
     },
     {
         itemName: 'Socks',
@@ -143,7 +156,8 @@ const items = [
         daysInUse: 1,
         essentials: false,
         style: 'unisex',
-        itemImage: 'images/socks.png'
+        itemImage: 'images/socks.png',
+        itemAltTag: 'Socks icon'
     },
     {
         itemName: 'Jacket',
@@ -151,7 +165,8 @@ const items = [
         daysInUse: 365,
         essentials: false,
         style: 'unisex',
-        itemImage: 'images/jacket.png'
+        itemImage: 'images/jacket.png',
+        itemAltTag: 'Jacket icon'
     },
     {
         itemName: 'Comfortable Shoes',
@@ -159,23 +174,26 @@ const items = [
         daysInUse: 365,
         essentials: false,
         style: 'unisex',
-        itemImage: 'images/shoes.png'
+        itemImage: 'images/shoes.png',
+        itemAltTag: 'Comfortable shoes icon'
     },
-    {
-        itemName: 'Swimwear',
-        weather: 'Hot',
-        daysInUse: 365,
-        essentials: false,
-        style: 'unisex',
-        itemImage: 'images/swimwear.png'
-    },
+    // {
+    //     itemName: 'Swimwear',
+    //     weather: 'Hot',
+    //     daysInUse: 365,
+    //     essentials: false,
+    //     style: 'unisex',
+    //     itemImage: 'images/swimwear.png',
+    //     itemAltTag: 'Comfortable shoes icon'
+    // },
     {
         itemName: 'Hat',
         weather: 'Hot',
         daysInUse: 365,
         essentials: false,
         style: 'unisex',
-        itemImage: 'images/hat.png'
+        itemImage: 'images/hat.png',
+        itemAltTag: 'Hat icon'
     },
     {
         itemName: 'Umbrella',
@@ -183,7 +201,8 @@ const items = [
         daysInUse: 365,
         essentials: false,
         style: 'unisex',
-        itemImage: 'images/umbrella.png'
+        itemImage: 'images/umbrella.png',
+        itemAltTag: 'Umbrella icon'
     },
 
     {
@@ -192,7 +211,8 @@ const items = [
         daysInUse: 1,
         essentials: false,
         style: 'unisex',
-        itemImage: 'images/underwear.png'
+        itemImage: 'images/underwear.png',
+        itemAltTag: 'Underwear icon'
     },
     {
         itemName: 'Dress',
@@ -200,7 +220,8 @@ const items = [
         daysInUse: 3,
         essentials: false,
         style: 'women',
-        itemImage: 'images/dress.png'
+        itemImage: 'images/dress.png',
+        itemAltTag: 'Dress icon'
     }
 ]
 
@@ -305,7 +326,7 @@ let generateCards = function () {
     essentialsBring.forEach(item => {
         cardOutput += `  <div class="item-card" >
             <div class="item" >
-               <div class="imgAndText">  <img src="${item.itemImage}" alt="">
+               <div class="imgAndText">  <img src="${item.itemImage}" alt="${item.itemAltTag}">
                <p>  ${item.itemName} ❗️</p></div>
                 <div class="checkbox-container">
                     <input type="checkbox" id="${item.itemName}">
@@ -317,7 +338,7 @@ let generateCards = function () {
     itemsBring.forEach(item => {
         cardOutput += `  <div class="item-card">
             <div class="item">
-               <div class="imgAndText"> <img src="${item.itemImage}" alt="">
+               <div class="imgAndText"> <img src="${item.itemImage}" alt="${item.itemAltTag}">
                <p>${item.itemName} x <strong>${item.itemQuantity} </strong></p></div>
                 <div class="checkbox-container">
                     <input type="checkbox" id="${item.itemName}">
