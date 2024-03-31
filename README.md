@@ -18,51 +18,45 @@ Things I Bring - assists individuals in packing for their travels. With just a f
 
 ### Main Screen
 
-![Main Page](images/main_screen1/png)
+![Main Page](images/main_screen1.png)
 
-### You guessed the combination - screen
+### Dropdown Menu
 
-![guessed](images/guessed.png)
+![guessed](images/dropdown_menu.png)
 
-### You lost the game - screen
+### List of items
 
-![lost](images/lost.png)
+![lost](images/list_of_items.png)
 
 ---
 
 ## 💻 Technologies used
 
-- ![JavaScript](https://img.shields.io/badge/-JavaScript-05122A?style=flat&logo=javascript)
-- ![HTML5](https://img.shields.io/badge/-HTML5-05122A?style=flat&logo=html5)
-- ![CSS3](https://img.shields.io/badge/-CSS-05122A?style=flat&logo=css3)
-- ![Git](https://img.shields.io/badge/-Git-05122A?style=flat&logo=git)
-- ![Github](https://img.shields.io/badge/-GitHub-05122A?style=flat&logo=github)
-- ![VSCode](https://img.shields.io/badge/-VS_Code-05122A?style=flat&logo=visualstudio)
-- ![Vim](https://img.shields.io/badge/-Vim-05122A?style=flat&logo=vim)
+- CSS/HTML
+- JavaScript
+- Axios for API calls
+- Weather API, Coordinates API
+- Figma wireframing and Figma high-fidelity
+- UX research
 
 ---
 
-## Getting started [ ▶️](https://natasharodic.github.io/mastermind/)
+## Getting started [ ▶️](https://thingsibring.natasharodic.com/)
 
-1. Pick Color Combination: Choose four colors from the sidebar to begin.
+1. Select your travel destination
 
-2. Check Your Guess: Click "Check" to see if your combination matches the winning one.
+2. Specify the duration of your vacation in days
 
-3. Get Feedback: Receive feedback with red and white pegs.
-   Red pegs indicate correct color and position.
-   White pegs mean correct color but wrong position.
-   No pegs mean no correct guesses.
+3. Choose your preferred style and click the "Pack Me" button
 
-4. Keep trying: Guess up to ten times to win, or continue trying until you succeed within ten attempts. If you reach the maximum of ten guesses without guessing the combination, you lose.
+4. After clicking the "Pack Me" button, you will receive a list of items to bring on your trip, including essentials and non-essentials (clothing), tailored to the weather conditions at your destination. Additionally, for non-essential items, you will be provided with the quantity to bring based on the length of your stay
 
 ---
 
 ## Next Steps
 
-- Tutorials and Instructions
+- Enhance user experience by adding more filters and options to the app
 
-- Score Tracking
+- Consider factors like business trips, number of travelers, packing for children, allergies, medical conditions, etc
 
-- Difficulty Levels
-
----
+- Provide users with tailored recommendations and suggestions based on their specific needs and circumstances
